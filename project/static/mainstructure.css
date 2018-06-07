@@ -1,0 +1,101 @@
+* {
+  font-family: arial;
+}
+body,html {
+	height: 96vh;
+	background-color: #CCCCB1;
+}
+/*Main header*/
+#mainHeaderBlock {
+	background-color: #DF2B1B;
+	height: 13%;
+	width: 100%;
+	padding: 1px;
+	border: thin groove #E85558;
+	/* [disabled]border-bottom-left-radius: 37px; */
+	border-bottom-right-radius: 37px;
+	border-top-right-radius: 37px;
+	border-top-left-radius: 37px;
+}
+#mainHeader {
+	text-align: center;
+	align: center;
+	font-size: 5vh;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	letter-spacing: 0.1ex;
+}
+a {
+  text-decoration:none;
+  color:black;
+}
+/*Navigation*/
+#navigationBlock {
+	background-color: grey;
+	height: 6%;
+	width: 80%;
+	padding: 1px;
+	margin: 0 auto;
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px;
+	float: left;
+}
+#navHeader {
+	text-align: center;
+	align: center;
+	font-size: 3vh;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 1.1vh;
+	display: inline-block;
+}
+#innerDiv {
+	width: auto;
+	height: 80%;
+	margin: 0 auto;
+	/* [disabled]right: -31px; */
+	padding-right: 0px;
+	padding-left: 53%;
+}
+.arrow {
+  width:3vh;
+  height:3vh;
+  display: inline-block;
+}
+/*Form submission*/
+#containerBlock {
+  height:80%;
+  padding: 3vh;
+}
+#formBlock {
+	height: 64%;
+	width: 100%;
+	margin: 0 auto;
+	float: right;
+	border-radius: 9px;
+	padding-top: 0px;
+}
+#entryBlock {
+	background-color: lightgrey;
+	float: right;
+	width: 19%;
+	height: 73%;
+	display: block;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-width: thick;
+	border-style: solid;
+	border-radius: 9px;
+	clear: left;
+	margin-top: 6px;
+}
+/*Table interface*/
+#tableBlock {
+	background-color: #CCCCB1;
+	height: 74%;
+	float: center;
+	display: inline-block;
+	width: 80%;
+}

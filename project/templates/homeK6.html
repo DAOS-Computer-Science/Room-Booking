@@ -1,0 +1,285 @@
+
+<!doctype html>
+<html>
+<head>
+  
+<link rel= "stylesheet" type= "text/css" href= "{{url_for('static', filename='mainstructure.css')}}">
+<link rel= "stylesheet" type= "text/css" href= "{{url_for('static', filename='entryform.css')}}">  
+<link rel= "stylesheet" type= "text/css" href= "{{url_for('static', filename='table.css')}}">
+<script src="{{url_for('static', filename = 'jquery-3.3.1.js')}}"></script>  
+<script src="{{url_for('static', filename = 'pageSwitch.js')}}"></script>    
+  
+<!--  
+<link rel="stylesheet" href="mainstructure.css">
+<link rel="stylesheet" href="entryform.css">
+<link rel="stylesheet" href="table.css">
+<script src="jquery-3.3.1.js"></script>
+<script src="pageSwitch.js"></script>
+-->
+
+<title>Homepage</title>
+</head>
+
+<body id="K5">
+<!--Main Header-->
+<div id="mainHeaderBlock">
+  <a href="homeK5.html">
+  <h1 id="mainHeader">DAOS Room Booking Website</h1>
+  </a>
+</div>
+
+<!--Navigation-->
+<div id="navigationBlock">
+  <div id="innerDiv">
+    <a href="/K5"><img src="{{url_for('static', filename = 'leftArrow.png')}}"; class="arrow"; id="leftArrow"></a>
+    <h3 id="navHeader">K6</h3>
+    <a href="/K5"><img src="{{url_for('static', filename = 'rightArrow.png')}}"; class="arrow"; id="rightArrow"></a>
+  </div>
+</div>
+
+<!--Form submission-->
+<div id="entryBlock">
+  <div id="hideButton">
+    <p>Hide</p>
+  </div>
+  <div id="formBlock">
+    <form id="mainForm" method = "post">
+      <br>
+      <div>
+        <label for="title">Title: </label>
+        <select name="title">
+          <br>
+          <option value="Mr">Mr</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Ms">Ms</option>
+          <option value="Dr">Dr</option>
+        </select>
+      </div>
+      <div>
+        <label for="forename">Forename: </label>
+          <br><input type="text" name="firstName">
+      </div>
+      <div>
+        <label for="surname">Surname: </label>
+          <br><input type="text" name="surname">
+      </div>
+      <div>
+        <label for="roomNum">Room: </label>
+          <br>
+          <select name="roomNum"; id="room">
+            <option value="K5">K5</option>
+            <option value="K6">K6</option>
+            <option value="K7">K7</option>
+        </select>
+      </div>
+      <div>
+        <label for="dayChosen">Day: </label>
+          <br>
+          <select name="dayChosen"; id="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+        </select>
+      </div>
+      <div>
+        <label for="timeChosen">Time: </label>
+
+        <br>
+        <select name="timeChosen"; id="time">
+          <option value="Registration">Registration</option>
+          <option value="P1">Period 1</option>
+          <option value="P2">Period 2</option>
+          <option value="P3">Period 3</option>
+          <option value="Lunch">Lunch</option>
+          <option value="P4">Period 4</option>
+          <option value="P5">Period 5</option>
+          <option value="AfterSchool">After School</option>
+        </select>
+      </div>
+      <div>
+        <label for="reason">Reason: </label>
+          <br><input type="text" name="reason">
+      </div>
+      <div id="buttonDiv">
+
+        <br>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--Table interface-->
+<div id="tableBlock">
+  <table id="mainTable">
+    <tbody>
+      <!--Column Headers-->
+      <tr>
+        <th id="firstHeader">Period</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+      <!--Registration-->
+      <tr>
+        <td class="rowHeader">Registration</td>
+        <td class="inputCell monday registration"; id="MonR">
+          <a><p>{{ df[0][0]}}</p></a>
+        </td>
+        <td class="inputCell tuesday registration"; id="TueR">
+          <a><p>{{ df[0][1]}}</p></a>
+        </td>
+        <td class="inputCell wednesday registration"; id="WedR">
+         <a><p>{{ df[0][2]}}</p></a>
+        </td>
+        <td class="inputCell thursday registration"; id="ThuR">
+          <a><p>{{ df[0][3]}}</p></a>
+        </td>
+        <td class="inputCell friday regisration"; id="FriR">
+          <a><p>{{ df[0][4]}}</p></a>
+        </td>
+      </tr>
+      <!--First Period-->
+      <tr>
+        <td class="rowHeader">Period 1</td>
+        <td class="inputCell monday p1"; id="Mon1">
+          <a><p>{{ df[1][0]}}</p></a>
+        </td>
+        <td class="inputCell tuesday p1"; id="Tue1">
+          <a><p>{{ df[1][1]}}</p></a>
+        </td>
+        <td class="inputCell wednesday p1"; id="Wed1">
+          <a><p>{{ df[1][2]}}</p></a>
+        </td>
+        <td class="inputCell thursday p1"; id="Thu1">
+          <a><p>{{ df[1][3]}}</p></a>
+        </td>
+        <td class="inputCell friday p1"; id="Fri1">
+          <a><p>{{ df[1][4]}}</p></a>
+        </td>
+      </tr>
+      <!--Second Period-->
+      <tr>
+        <td class="rowHeader">Period 2</td>
+        <td class="inputCell monday p2"; id="Mon2">
+          <a><p>{{ df[2][0]}}</p></a>
+        </td>
+        <td class="inputCell tuesday p2"; id="Tue2">
+          <a><p>{{ df[2][1]}}</p></a>
+        </td>
+        <td class="inputCell wednesday p2"; id="Wed2">
+          <a><p>{{ df[2][2]}}</p></a>
+        </td>
+        <td class="inputCell thursday p2"; id="Thu2">
+          <a><p>{{ df[2][3]}}</p></a>
+        </td>
+        <td class="inputCell friday p2"; id="Fri2">
+          <a><p>{{ df[2][4]}}</p></a>
+        </td>
+      </tr>
+      <!--Third Period-->
+      <tr>
+        <td class="rowHeader">Period 3</td>
+        <td class="inputCell monday p3"; id="Mon3">
+          <a><p>{{ df[3][0]}}</p></a>
+        </td>
+        <td class="inputCell tuesday p3"; id="Tue3">
+          <a><p>{{ df[3][1]}}</p></a>
+        </td>
+        <td class="inputCell wednesday p3"; id="Wed3">
+          <a><p>{{ df[3][2]}}</p></a>
+        </td>
+        <td class="inputCell thursday p3"; id="Thu3">
+          <a><p>{{ df[3][3]}}</p></a>
+        </td>
+        <td class="inputCel friday p3l"; id="Fri3">
+          <a><p>{{ df[3][4]}}</p></a>
+        </td>
+      </tr>
+      <!--Lunch Period-->
+      <tr>
+        <td class="rowHeader">Lunch</td>
+        <td class="inputCell monday lunch"; id="MonL">
+          <a><p>{{ df[4][0]}}</p></a>
+        </td>
+        <td class="inputCell tuesday lunch"; id="TueL">
+          <a><p>{{ df[4][1]}}</p></a>
+        </td>
+        <td class="inputCell wednesday lunch"; id="WedL">
+          <a><p>{{ df[4][2]}}</p></a>
+        </td>
+        <td class="inputCell thursday lunch"; id="ThuL">
+          <a><p>{{ df[4][3]}}</p></a>
+        </td>
+        <td class="inputCell friday lunch"; id="FriL">
+          <a><p>{{ df[4][4]}}</p></a>
+        </td>
+      </tr>
+      <!--Fourth-->
+      <tr>
+        <td class="rowHeader">Period 4</td>
+        <td class="inputCell monday p4"; id="Mon4">
+          <a><p>{{ df[5][0]}}</p></a>
+        </td>
+        <td class="inputCell tuesday p4"; id="Tue4">
+          <a><p>{{ df[5][1]}}</p></a>
+        </td>
+        <td class="inputCell wednesday p4"; id="Wed4">
+          <a><p>{{ df[5][2]}}</p></a>
+        </td>
+        <td class="inputCell thursday p4"; id="Thu4">
+          <a><p>{{ df[5][3]}}</p></a>
+        </td>
+        <td class="inputCell friday p4"; id="Fri4">
+          <a><p>{{ df[5][4]}}</p></a>
+        </td>
+      </tr>
+      <!--Fifth Period-->
+      <tr>
+        <td class="rowHeader">Period 5</td>
+        <td class="inputCell monday p5"; id="Mon5">
+          <a><p>{{ df[6][0]}}</p></a>
+        </td>
+        <td class="inputCell tuesday p5"; id="Tue5">
+          <a><p>{{ df[6][1]}}</p></a>
+        </td>
+        <td class="inputCell wednesday p5"; id="Wed5">
+          <a><p>{{ df[6][2]}}</p></a>
+        </td>
+        <td class="inputCell thursday p5"; id="Thu5">
+          <a><p>{{ df[6][3]}}</p></a>
+        </td>
+        <td class="inputCell friday p5"; id="Fri5">
+          <a><p>{{ df[6][4]}}</p></a>
+        </td>
+      </tr>
+      <!--After School-->
+      <tr>
+        <td class="rowHeader">After School</td>
+        <td class="inputCell monday afterSchool"; id="MonAS">
+          <a><p>{{ df[7][0]}}</p></a>
+        </td>
+        <td class="inputCell tuesday afterSchool"; id="TueAS">
+          <a><p>{{ df[7][1]}}</p></a>
+        </td>
+        <td class="inputCell wednesday afterSchool"; id="WedAS">
+          <a><p>{{ df[7][2]}}</p></a>
+        </td>
+        <td class="inputCell thursday afterSchool"; id="ThuAS">
+          <a><p>{{ df[7][3]}}</p></a>
+        </td>
+        <td class="inputCell friday afterSchool"; id="FriAS">
+          <a><p>{{ df[7][4]}}</p></a>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

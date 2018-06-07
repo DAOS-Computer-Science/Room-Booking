@@ -1,0 +1,33 @@
+form {
+  width:80%;
+  height:60%;
+  text-align:center;
+  font-size: 2vh;
+  margin:0 auto;
+}
+input {
+  font-size: 2vh;
+  width:10vw;
+}
+select {
+  font-size: 2vh;
+  width:10.1vw;
+
+}
+
+label {
+  display: inline-block;
+  text-align:left;
+  width:10vw;
+}
+
+#hideButton p {
+  font-size: 12pt;
+  font-weight:bold;
+  margin-left:2vh;
+}
+#hideButton {
+  width:20%;
+  float:left;
+
+}
