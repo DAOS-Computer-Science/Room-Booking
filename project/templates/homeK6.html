@@ -9,13 +9,14 @@
 <script src="{{url_for('static', filename = 'jquery-3.3.1.js')}}"></script>  
 <script src="{{url_for('static', filename = 'pageSwitch.js')}}"></script>    
   
-<!--  
-<link rel="stylesheet" href="mainstructure.css">
-<link rel="stylesheet" href="entryform.css">
-<link rel="stylesheet" href="table.css">
-<script src="jquery-3.3.1.js"></script>
-<script src="pageSwitch.js"></script>
--->
+<!--For Local testing -->
+  
+<link rel="stylesheet" href="../static/mainstructure.css">
+<link rel="stylesheet" href="../static/entryform.css">
+<link rel="stylesheet" href="../static/table.css">
+<script src="../static/jquery-3.3.1.js"></script>
+<script src="../static/pageSwitch.js"></script>
+
 
 <title>Homepage</title>
 </head>
@@ -31,9 +32,9 @@
 <!--Navigation-->
 <div id="navigationBlock">
   <div id="innerDiv">
-    <a href="/K5"><img src="{{url_for('static', filename = 'leftArrow.png')}}"; class="arrow"; id="leftArrow"></a>
+    <a href="/K5"><img src="{{url_for('static', filename = 'leftArrow.png')}}"; alt="../static/leftArrow.png"; class="arrow"; id="leftArrow"></a>
     <h3 id="navHeader">K6</h3>
-    <a href="/K5"><img src="{{url_for('static', filename = 'rightArrow.png')}}"; class="arrow"; id="rightArrow"></a>
+    <a href="/K5"><img src="{{url_for('static', filename = 'rightArrow.png')}}"; alt="../static/rightArrow.png"; class="arrow"; id="rightArrow"></a>
   </div>
 </div>
 
