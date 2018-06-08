@@ -6,4 +6,7 @@
 
 # Developers:
 
-
+Victor Starzec
+Gordon Lee
+Tim Yeo
+Roy Fishwick
