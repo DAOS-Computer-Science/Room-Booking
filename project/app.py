@@ -17,8 +17,6 @@ def room(csvfile, homepage):
         timechosen = request.form['timeChosen']
         reason = request.form['reason']
         
-        #df = pd.read_csv('databases/currentweek.csv')
-        
         #converts variables to respective number in database
         days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
         daychosen = days.index(daychosen) + 1
@@ -41,12 +39,11 @@ def room(csvfile, homepage):
         #writes to the csv
         df.to_csv(csvfile, index = False)
         
-        #return str(df.iat[timechosen, daychosen])
-        
         return render_template('success.html', currentroom = roomnum)
       
     else:
         
+        #converts dataframe to array and outputs array to webpage
         df = df.drop(df.columns[0], axis = 1)
         df = df.values
         
