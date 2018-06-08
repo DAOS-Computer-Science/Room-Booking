@@ -28,6 +28,8 @@ label {
 	clear: left;
 	float: left;
 	font-size: 125%;
+	margin-bottom: 1%;
+	margin-top: 1%;
 }
 
 #hideButton p {
