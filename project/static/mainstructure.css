@@ -81,7 +81,7 @@ a {
 	height: 74%;
 	display: block;
 	clear: left;
-	border: 0.5vw solid #DF2B1B;
+	border: 0.5vw solid #000000;
 	border-radius: 9px;
 	margin-top: 1%;
 }
@@ -92,8 +92,7 @@ a {
 	float: center;
 	display: inline-block;
 	width: 78%;
-	border-width: 0.5vw;
-	border-style: solid;
+	border: 0.5vw solid #DF2B1B;
 	border-radius: 9px;
 	margin-top: 1%;
 }
