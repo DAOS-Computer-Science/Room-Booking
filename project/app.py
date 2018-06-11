@@ -36,7 +36,7 @@ def room(csvfile, homepage):
 
         # puts data together as a variable
         # celldata = title + " " + firstname + " " + surname + "\n" + reason
-            if reason == () :
+            if reason == string.empty:
                 celldata = title + " " + firstname + " " + surname
             else:
                 celldata = title + " " + firstname + " " + surname + " (" + reason + ")"
