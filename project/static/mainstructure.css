@@ -76,6 +76,7 @@ a {
 }
 #entryBlock {
 	background-color: lightgrey;
+	opacity: 0;
 	float: right;
 	width: 19%;
 	height: 74%;
