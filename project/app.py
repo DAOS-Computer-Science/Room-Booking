@@ -18,6 +18,9 @@ def room(csvfile, homepage):
         daychosen = request.form['dayChosen']
         timechosen = request.form['timeChosen']
         reason = request.form['reason']
+        
+        if firstname == '' or surname == '' or reason == '':
+            return render_template('failure.html', currentroom = roomnum, message = "Form not filled in!")
 
         # converts variables to respective number in database
         days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
@@ -29,7 +32,7 @@ def room(csvfile, homepage):
         df = df.applymap(str)
 
         if df.iat[timechosen, daychosen] != "Free":
-            return render_template('failure.html', currentroom=roomnum, message="Cell is already taken!")
+            return render_template('failure.html', currentroom = roomnum, message = "Cell is already taken!")
 
         # puts data together as a variable
         # celldata = title + " " + firstname + " " + surname + "\n" + reason
