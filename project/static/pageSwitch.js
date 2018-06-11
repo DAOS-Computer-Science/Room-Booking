@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $("#entryBlock").hide();
     $("td a").click(function(){
-        $("#entryBlock").animate({width:'show'},350);
+        $("#entryBlock").animate({width:'show',opacity:1},350);
     }
   );
 });
