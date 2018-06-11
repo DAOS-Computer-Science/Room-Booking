@@ -13,11 +13,11 @@ timechosen = "Registration"
 reason = "Test reason"
         
         #converts variables to respective number in database
-days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
 daychosen = days.index(daychosen) + 1
-times = ['Registration', 'P1', 'P2', 'P3', 'Lunch', 'P4', 'P5', 'AfterSchool']
-timechosen = times.index(timechosen) 
-          
+times = ['registration', 'p1', 'p2', 'p3', 'lunch', 'p4', 'p5', 'afterSchool']
+timechosen = times.index(timechosen)
+
 #converts every cell to a string
 df = df.applymap(str) 
         
