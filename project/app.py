@@ -56,7 +56,7 @@ def home():
     return redirect(url_for('K6'))
 
 @app.route('/K7', methods=['POST', 'GET'])
-def K5():
+def K7():
     return room('databases/currentweekK7.csv', 'homeK7.html')
 
 @app.route('/K6', methods=['POST', 'GET'])
