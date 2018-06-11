@@ -36,7 +36,10 @@ def room(csvfile, homepage):
 
         # puts data together as a variable
         # celldata = title + " " + firstname + " " + surname + "\n" + reason
-        celldata = title + " " + firstname + " " + surname + " (" + reason + ")"
+            if reason == () :
+                celldata = title + " " + firstname + " " + surname
+            else:
+                celldata = title + " " + firstname + " " + surname + " (" + reason + ")"
         # adds the cell data to the relevant cell
         df.iat[timechosen, daychosen] = celldata
 
