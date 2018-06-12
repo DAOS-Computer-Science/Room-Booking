@@ -1,6 +1,5 @@
 form {
 	width: 80%;
-	height: 100%;
 	text-align: center;
 	font-size: 2vh;
 	margin: 0 auto;
@@ -28,8 +27,8 @@ label {
 	clear: left;
 	float: left;
 	font-size: 125%;
-	margin-bottom: 1%;
-	margin-top: 1%;
+	margin-bottom: 1vh;
+	margin-top: 1vh;
 }
 
 #hideButton p {
@@ -39,9 +38,17 @@ label {
 	border-width: medium;
 	border-style: solid;
 	border-radius: 16px;
+	margin-top: 11%;
 }
 #hideButton {
 	width: 5em;
 	float: left;
 	text-align: center;
+}
+#buttonDiv {
+	margin-top: 7%;
+}
+button {
+	border-radius: 21px;
+	border: medium solid #000000;
 }
