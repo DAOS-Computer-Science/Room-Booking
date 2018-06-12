@@ -1,0 +1,54 @@
+form {
+	width: 80%;
+	text-align: center;
+	font-size: 2vh;
+	margin: 0 auto;
+}
+input {
+	font-size: 2vh;
+	width: 10vw;
+	border-radius: 7px;
+	border: thin groove #000000;
+	text-indent: 10px;
+	padding-left: 0px;
+}
+select {
+	font-size: 2vh;
+	width: 10.1vw;
+	border-radius: 7px;
+	padding-left: 7px;
+	border: thin groove #000000;
+}
+
+label {
+	display: inline-block;
+	text-align: left;
+	width: 100%;
+	clear: left;
+	float: left;
+	font-size: 125%;
+	margin-bottom: 1vh;
+	margin-top: 1vh;
+}
+
+#hideButton p {
+	font-size: 12pt;
+	font-weight: bold;
+	margin-left: 2vh;
+	border-width: medium;
+	border-style: solid;
+	border-radius: 16px;
+	margin-top: 11%;
+}
+#hideButton {
+	width: 5em;
+	float: left;
+	text-align: center;
+}
+#buttonDiv {
+	margin-top: 7%;
+}
+button {
+	border-radius: 21px;
+	border: medium solid #000000;
+}
