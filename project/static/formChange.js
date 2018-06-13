@@ -10,19 +10,19 @@ $(document).ready(function(){
 
     for (i=0;i<(days.length);i++){
       if (classes[0] == days[i]) {
-        $('#day').val(days[i]);
+        $('#day').text(days[i]);
       }
       else {}
     };
     for (i=0;i<(times.length);i++){
       if (classes[1] == times[i]) {
-        $('#time').val(times[i]);
+        $('#time').text(times[i]);
       }
       else {}
     };
     for (i=0;i<(roomList.length);i++){
       if (bodyID == roomList[i]) {
-        $('#room').val(roomList[i]);
+        $('#room').text(roomList[i]);
       }
       else {}
     };
