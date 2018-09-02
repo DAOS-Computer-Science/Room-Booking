@@ -1,0 +1,26 @@
+<!DOCTYPE html><html>
+<head><title> Login</title></head><body><style>
+#fail {
+  color:red;
+  visibility:hidden;
+}
+</style>
+<table><tr><td>
+  Name</td><td><input id="surname"> (initial + Surname eg. A Person)</td></tr><tr><td>
+  Password</td><td><input id="password"></td></tr></table>
+  <input type=button value="Login" onClick=main()>
+  <p id="fail">
+    Invalid Name or Password
+    <!-- Will only be seen when login details are invalid -->
+  </p>
+<script>
+function main() {
+  //Checks login details and grants access
+
+  //If invalid
+  document.getElementById('fail').style.visibility = "visible";
+}
+
+</script>
+</body>
+</html>
